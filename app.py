@@ -12,11 +12,11 @@ sc = pickle.load(open('models/standscaler.pkl','rb'))
 # creating flask app
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', methods = ['GET', 'POST'])
 def index():
     return render_template("index.html")
 
-@app.route("/home")
+@app.route('/home', methods = ['GET', 'POST'])
 def home():
     return render_template("home.html")
 
