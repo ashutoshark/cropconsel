@@ -3,7 +3,7 @@ import numpy as np
 import pandas
 import sklearn
 import pickle
-
+import requests
 # importing model
 model = pickle.load(open('models/model.pkl','rb'))
 sc = pickle.load(open('models/standscaler.pkl','rb'))
@@ -12,13 +12,42 @@ sc = pickle.load(open('models/standscaler.pkl','rb'))
 # creating flask app
 app = Flask(__name__)
 
+API_KEY = "14eb4cb99a4139d1aca0b7e98b640e26"
 @app.route('/', methods = ['GET', 'POST'])
-def index():
-    return render_template("index.html")
+# this is weather aip implemntaion
+def weather():
+    city = 'New York'  # Default city
+    weather_data = None
 
-@app.route('/home', methods = ['GET', 'POST'])
-def home():
-    return render_template("home.html")
+    if request.method == 'POST':
+        city = request.form['city']
+        weather_data = get_weather_data(city)
+
+    return render_template('index.html', city=city, weather_data=weather_data)
+
+def get_weather_data(city):
+    base_url = 'http://api.openweathermap.org/data/2.5/weather'
+    params = {
+        'q': city,
+        'appid': API_KEY,
+        'units': 'metric'  # You can change this to 'imperial' or 'standard' if needed
+    }
+
+    response = requests.get(base_url, params=params)
+
+    if response.status_code == 200:
+        data = response.json()
+        weather_info = {
+            'temperature': data['main']['temp'],
+            'humidity':data['main']['humidity'],
+            'description': data['weather'][0]['description'],
+            'icon': data['weather'][0]['icon']
+        }
+        return weather_info
+    else:
+        return None
+
+
 
 @app.route("/predict",methods=['POST'])
 def predict():

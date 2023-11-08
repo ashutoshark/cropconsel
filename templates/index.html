@@ -33,7 +33,7 @@
 
 
 
-  <body style="background:#BCBBB8">
+  <body style="background:#c2e2f5">
   <!--=======================navbar=====================================================-->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
@@ -65,7 +65,7 @@
   <div class="container my-3 mt-3">
       <h1 class="text-success">Crop Recommendation System <span class="text-success">🌱</span></h1>
 
-<!--      adding form-->
+<!--adding form-->
       <form action="/predict" method="POST">
           <div class="row">
               <div class="col-md-4">
@@ -104,8 +104,6 @@
 				</div>
 			</div>
 
-
-
            <div class="row mt-4">
 
            <div class="col-md-12 text-center">
@@ -114,11 +112,33 @@
 			</div>
       </form>
 
+	  <!-- this is weather form -->
+      <div class="row mt-4">
+		<div class="col-md-12">
+
+			<form method="POST">
+				<input type="text" name="city" placeholder="Enter City Name" value="{{ city }}">
+				<button type="submit" class="btn btn-secondary btn-sm">Get Weather</button>
+			</form>
+		
+			{% if weather_data %}
+			<div class="weather">
+				<p>City: {{ city }}</p>
+				<p>Temperature: {{ weather_data['temperature'] }}°C</p>
+				<p>Weather: {{ weather_data['description'] }}</p>
+				<p>Humidity:{{weather_data['humidity']}}</p>
+				
+				<img src="http://openweathermap.org/img/wn/{{ weather_data['icon'] }}.png" alt="Weather Icon">
+			</div>
+			{% endif %}
+	
+		</div>
+	</div>
 
 
        {% if result %}
 		<div class="card bg-dark" style="width: 18rem;">
-		  <img src="{{url_for('static', filename='static/img.jpg')}}" class="card-img-top" alt="...">
+		  <img src="{{url_for('static', filename='img.jpg')}}" class="card-img-top" alt="...">
 		  <div class="card-body">
 			<h5 class="card-title">Recommend Crop for cultivation is:</h5>
 			<p class="card-text">{{ result }}</p>
