@@ -34,7 +34,7 @@ Contributing
 Contributions to the project are welcome. If you have any suggestions, bug reports, or feature requests, please submit them through the issue tracker on the GitHub repository.
 
 # Some glimps of product
-![myimage-alt-tag](/static\product.png)
+![myimage-alt-tag]('static\product.png')
 
 
 # Acknowledgements
