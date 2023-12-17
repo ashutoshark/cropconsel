@@ -35,6 +35,15 @@ Contributions to the project are welcome. If you have any suggestions, bug repor
 
 # Some glimps of product
 ![myimage-alt-tag](https://github.com/ashutoshark/cropconsel/blob/main/static/product.png)
+![WhatsApp Image 2023-12-17 at 17 34 50_643d2c07](https://github.com/ashutoshark/cropconsel/assets/77884842/0674a41a-d271-421e-a43f-b8f0d53c0a60)
+![WhatsApp Image 2023-12-17 at 17 34 50_7c94d85b](https://github.com/ashutoshark/cropconsel/assets/77884842/7c6e1e5d-0e24-4eed-84de-7bcb1936f0d5)
+![WhatsApp Image 2023-12-17 at 17 34 50_3fed80b1](https://github.com/ashutoshark/cropconsel/assets/77884842/52132d82-77bc-44d2-87dc-edfd9906e286)
+![WhatsApp Image 2023-12-17 at 17 34 51_1a0a2356](https://github.com/ashutoshark/cropconsel/assets/77884842/26df6441-2b24-40e1-be87-e39dbb260194)
+![WhatsApp Image 2023-12-17 at 17 34 51_2b51b0fb](https://github.com/ashutoshark/cropconsel/assets/77884842/e6d6485a-3624-4d56-ad8e-d4a31e85c28a)
+![WhatsApp Image 2023-12-17 at 17 34 51_19d9b90c](https://github.com/ashutoshark/cropconsel/assets/77884842/9fdfd781-b030-4b49-aa72-b10b754bb920)
+
+
+
 
 
 # Acknowledgements
