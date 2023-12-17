@@ -1,4 +1,6 @@
-# Crop Recommendation System Using Machine Learning
+# [CROP COUNSEL Report[1].pdf](https://github.com/ashutoshark/cropconsel/files/13696468/CROP.COUNSEL.Report.1.pdf)
+Crop Recommendation System Using Machine Learning
+
 # Description
 The Crop Recommendation System is a machine learning-based application that provides recommendations for suitable crops based on various environmental and soil conditions. It aims to assist farmers and agricultural professionals in making informed decisions about crop selection, optimizing yields, and maximizing profitability.
 
